@@ -1,13 +1,6 @@
 import * as path from 'path';
 import * as fs from 'fs';
 
-// export const generatePaths = (name: string) => {
-//   return {
-//     absoluteDir: path.resolve(`./repos/${name}`),
-//     absoluteGitDir: path.resolve(`./git-store/${name}`),
-//   };
-// };
-
 export const generatePaths = (name: string) => {
   return {
     absoluteDir: path.resolve(`./repos/${name}`),
@@ -22,4 +15,8 @@ export const createFoldersForGit = (name: string) => {
 
   fs.mkdirSync(absoluteDir, { recursive: true });
   fs.mkdirSync(absoluteGitDir, { recursive: true });
+};
+
+export const createFile = (filePath, fileContents) => {
+  fs.writeFileSync(filePath, fileContents, 'utf8');
 };
