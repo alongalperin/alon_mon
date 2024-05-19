@@ -8,7 +8,7 @@ export class CreateCommitDto {
   branch: string;
 
   @IsString()
-  fileName: string;
+  filename: string;
 
   @IsString()
   fileContents: string;

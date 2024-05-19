@@ -8,10 +8,10 @@ export class CommitsService {
   private readonly logger = new Logger(CommitsService.name);
 
   async create(createCommitDto: CreateCommitDto) {
-    const { repo, branch, fileName, fileContents, commitMessage } =
+    const { repo, branch, filename, fileContents, commitMessage } =
       createCommitDto;
     const { absoluteDir } = generatePaths(repo);
-    const filePath = `${absoluteDir}/${fileName}`;
+    const filePath = `${absoluteDir}/${filename}`;
 
     try {
       await createFile(filePath, fileContents);

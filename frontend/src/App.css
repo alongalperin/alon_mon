@@ -1,0 +1,16 @@
+.App {
+  padding: 2rem;
+  text-align: center;
+}
+
+.Header p   {
+  margin-bottom: 0px;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.selected-branch {
+  background-color: lightgreen;
+  margin: auto;
+  width: fit-content;
+}

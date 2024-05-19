@@ -7,6 +7,7 @@ async function bootstrap() {
     logger: ['log', 'error', 'warn'],
   });
 
+  app.enableCors();
   app.useGlobalPipes(new ValidationPipe());
 
   await app.listen(3000);
